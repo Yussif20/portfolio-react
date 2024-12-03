@@ -6,11 +6,11 @@ import ageCalculatorImg from "./assets/projects/ageCalculator.jpeg"
 
 export const projects = [
     {
-        // fix the current lang when first open the website
-        // fix the founders styles 
-        // fix the input styles in the sign page 
+        // fix the current lang when first open the website [x]
         // try to navigate to the top of the page when routing
-        // fix the vercel routing problem
+        // fix the founders styles [x]
+        // fix the input styles in the sign page [x]
+        // fix the vercel routing problem [x]
         id: 1,
         title: 'Marketio',
         img:marketioImg,
@@ -55,3 +55,5 @@ export const projects = [
         githubLink:"https://github.com/Yussif20/age-by-day-calculator-js",
     }
 ]
+
+// make sure all of them have a readme file 

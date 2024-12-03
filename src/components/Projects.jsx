@@ -1,22 +1,23 @@
-import React from 'react';
-
 import { projects } from '../projects';
 const Projects = () => {
   return (
     <section id="projects" className="py-16">
-      <h2 className="text-center text-4xl font-bold mb-8">My Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 max-w-4xl mx-auto">
+      <h2 className="text-center text-4xl font-bold mb-12">My Projects</h2>
+      <div className="flex flex-col gap-20 px-6">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow"
-          >
-            <img
-              src={project.img}
-              alt={project.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
+          <div key={index} className="flex items-center justify-center gap-4">
+            <div
+              className={`flex-1 ${(index + 1) % 2 !== 0 ? 'order-1' : 'order-2'}`}
+            >
+              <img
+                src={project.img}
+                alt={project.title}
+                className="w-full h-80 object-contain object-top"
+              />
+            </div>
+            <div
+              className={`flex-1 text-center flex flex-col items-center justify-center ${(index + 1) % 2 !== 0 ? 'order-2' : 'order-1'}`}
+            >
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
               <p className="text-gray-600 mb-4">{project.description}</p>
               <div className="flex justify-between">
