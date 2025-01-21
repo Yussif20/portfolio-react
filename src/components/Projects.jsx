@@ -1,3 +1,4 @@
+import React from 'react';
 import { projects } from '../projects';
 const Projects = () => {
   return (
@@ -19,8 +20,10 @@ const Projects = () => {
               className={`flex-1 text-center flex flex-col items-center justify-center ${(index + 1) % 2 !== 0 ? 'order-2' : 'order-1'}`}
             >
               <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-4">{project.description}</p>
-              <div className="flex justify-between">
+              <p className="text-gray-700 dark:text-gray-400 font-medium mb-4">
+                {project.description}
+              </p>
+              <div className="flex gap-4 font-semibold">
                 <a
                   href={project.githubLink}
                   className="text-blue-500 hover:underline"

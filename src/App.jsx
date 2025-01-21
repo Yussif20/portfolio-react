@@ -1,3 +1,4 @@
+import React from 'react';
 import VideoBackground from './components/VideoBackground';
 import Header from './components/Header';
 import Bio from './components/Bio';

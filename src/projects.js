@@ -6,15 +6,10 @@ import ageCalculatorImg from "./assets/projects/ageCalculator.jpeg"
 
 export const projects = [
     {
-        // fix the current lang when first open the website [x]
-        // try to navigate to the top of the page when routing
-        // fix the founders styles [x]
-        // fix the input styles in the sign page [x]
-        // fix the vercel routing problem [x]
         id: 1,
         title: 'Marketio',
         img:marketioImg,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim id, adipiscing nec, ultricies sed, dolor.',
+        description: 'Marketio is a fully responsive e-commerce application built with React.js and Tailwind CSS. It offers a seamless shopping experience with various functionalities like product search, multi-language support, user authentication, payment integration, and more.',
         liveLink: 'https://marketio-hpgs.vercel.app/',
         githubLink:"https://github.com/Yussif20/Marketio",
     },
@@ -22,7 +17,7 @@ export const projects = [
         id: 2,
         title: 'Around the world',
         img:aroundTheWorldImg,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim id, adipiscing nec, ultricies sed, dolor.',
+        description: 'A React.js project showcasing a user-friendly interface to explore countries around the world. The app fetches data using the REST Countries API and displays it in an interactive and visually appealing manner.',
         liveLink: 'https://around-the-world-reactjs.vercel.app/',
         githubLink:"https://github.com/Yussif20/around-the-world_reactjs",
     },
@@ -46,8 +41,7 @@ export const projects = [
         githubLink:"https://github.com/Yussif20/TODO-App",
     },
     {
-        //fix the x icon (images) bug
-        id:4 ,
+        id:5 ,
         title: 'Age by day calculator',
         img:ageCalculatorImg,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim id, adipiscing nec, ultricies sed, dolor.',
