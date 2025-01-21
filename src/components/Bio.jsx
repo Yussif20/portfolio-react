@@ -1,3 +1,4 @@
+import React from 'react';
 import yussifImage from '../assets/yussif.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -45,14 +46,9 @@ const Bio = () => {
             >
               Say Hi
             </a>
-            <a
-              href="/path-to-your-cv.pdf"
-              className=""
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
               Download CV{' '}
-              <i className=" ml-1 fa-solid fa-arrow-down fa-bounce"></i>
+              <i className="ml-1 fa-solid fa-arrow-down fa-bounce"></i>
             </a>
           </div>
         </div>
