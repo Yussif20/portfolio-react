@@ -11,10 +11,9 @@ const Bio = () => {
       className="min-h-[80vh] flex items-center justify-center py-16 px-4 sm:px-16 mx-auto text-center sm:text-left"
     >
       <div className="flex flex-col sm:flex-row items-center sm:items-start lg:gap-16 px-8">
-        {/* Text Section */}
         <div className="m-auto text-center">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-            Hi There, I'm a Passionate Frontend Developer
+            Hi There, I&apos;m a Passionate Frontend Developer
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl m-6">
             My name is <span className="font-semibold">Yusif Ayman</span>. I
@@ -52,10 +51,9 @@ const Bio = () => {
             </a>
           </div>
         </div>
-        {/* Image Section */}
         <div className=" flex items-center justify-center bg-black dark:bg-greenColor rounded-bioPic">
           <img
-            src={yussifImage} // Replace with the actual path to your image
+            src={yussifImage}
             alt="Yusif Ayman"
             className="w-[24rem] object-cover rounded-bioPic"
           />

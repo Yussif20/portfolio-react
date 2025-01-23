@@ -1,3 +1,4 @@
+import React from 'react';
 import ThemeSwitcher from './ThemeSwitcher';
 
 const Header = () => {
@@ -5,7 +6,7 @@ const Header = () => {
     <header className="sticky top-0 z-10 bg-white dark:bg-black border-b border-black dark:border-white px-4 py-2 sm:px-10 mx-auto">
       <div className="container mx-auto flex justify-between items-center p-4">
         <nav className="flex gap-4">
-          {['Bio', 'Skills', 'Projects', 'Contact'].map((section) => (
+          {['Bio', 'Skills', 'Projects'].map((section) => (
             <a
               key={section}
               href={`#${section.toLowerCase()}`}

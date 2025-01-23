@@ -26,7 +26,7 @@ export const projects = [
         id: 3,
         title: 'Kanban board',
         img:kanbanImg,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim id, adipiscing nec, ultricies sed, dolor.',
+        description: `A responsive and interactive task management tool built with React, designed to organize and prioritize workflows visually. This project features draggable tasks, customizable boards and columns, and accessible modals and dropdown menus using Radix UI. With smooth drag-and-drop functionality powered by '@dnd-kit/sortable' and efficient state management via 'immer', it delivers a seamless user experience across all devices.`,
         liveLink: 'https://kanban-board-three-liart.vercel.app/',
         githubLink:"https://github.com/Yussif20/kanban-board",
     }
@@ -36,7 +36,7 @@ export const projects = [
         id:4 ,
         title: 'Todo',
         img:todoImg,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim id, adipiscing nec, ultricies sed, dolor.',
+        description: 'A simple and intuitive Todo App built with HTML, CSS, and JavaScript. The app allows users to manage their daily tasks efficiently, with features to add, check, delete, filter, and reorder tasks. The app supports both light and dark themes, ensuring a comfortable user experience.',
         liveLink: 'https://todo-app-cyan-ten-81.vercel.app/',
         githubLink:"https://github.com/Yussif20/TODO-App",
     },
@@ -44,7 +44,7 @@ export const projects = [
         id:5 ,
         title: 'Age by day calculator',
         img:ageCalculatorImg,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim id, adipiscing nec, ultricies sed, dolor.',
+        description: `This project is an interactive age calculator built using HTML, CSS, and JavaScript. It allows users to input their birth date and instantly calculates their age in years, months, and days. The design features a modern and clean interface, with a responsive layout and an engaging user experience. This project demonstrates my ability to implement dynamic functionality using JavaScript and create visually appealing, user-friendly designs.`,
         liveLink: 'https://age-by-day-calculator-js.vercel.app/',
         githubLink:"https://github.com/Yussif20/age-by-day-calculator-js",
     }
