@@ -10,8 +10,8 @@ const Bio = () => {
       id="bio"
       className="min-h-[80vh] flex items-center justify-center py-16 px-4 sm:px-16 mx-auto text-center sm:text-left"
     >
-      <div className="flex flex-col sm:flex-row items-center sm:items-start lg:gap-16 px-8">
-        <div className="m-auto text-center">
+      <div className="flex flex-col md:flex-row items-center sm:items-start lg:gap-16 px-8">
+        <div className="m-auto text-center order-2 md:order-1">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
             Hi There, I&apos;m a Passionate Frontend Developer
           </h1>
@@ -38,7 +38,7 @@ const Bio = () => {
               <FontAwesomeIcon icon={faLinkedin} size="lg" />
             </a>
           </p>
-          <div className="flex flex-col sm:flex-row sm:items-center justify-center gap-6  text-2xl font-medium leading-6">
+          <div className="flex mb-8 sm:mb-2 flex-col sm:flex-row sm:items-center justify-center gap-6  text-2xl font-medium leading-6">
             <a
               href="#contact"
               className="px-6 py-2 bg-black text-white dark:bg-greenColor"
@@ -51,7 +51,7 @@ const Bio = () => {
             </a>
           </div>
         </div>
-        <div className=" flex items-center justify-center bg-black dark:bg-greenColor rounded-bioPic">
+        <div className=" flex items-center justify-center bg-black dark:bg-greenColor rounded-bioPic order-1 md:order-2 mb-6 md:mb-0">
           <img
             src={yussifImage}
             alt="Yusif Ayman"
