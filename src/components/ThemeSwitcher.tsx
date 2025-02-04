@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const activeCircleStyles =
   'flex items-center justify-center w-5 h-5 rounded-full';
 
-const ThemeSwitcher = () => {
+const ThemeSwitcher: React.FC = () => {
   const [theme, setTheme] = useState('light');
 
   useEffect(() => {
@@ -14,7 +14,7 @@ const ThemeSwitcher = () => {
     }
   }, []);
 
-  const themeToggleHandler = (newTheme) => {
+  const themeToggleHandler = (newTheme: string) => {
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);

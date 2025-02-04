@@ -1,12 +1,11 @@
-import React from 'react';
-import ThemeSwitcher from './ThemeSwitcher';
+import ThemeSwitcher from './ThemeSwitcher.tsx';
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className="sticky top-0 z-10 bg-white dark:bg-black border-b border-black dark:border-white px-4 py-2 sm:px-10 mx-auto">
       <div className="container mx-auto flex justify-between items-center p-4">
         <nav className="flex gap-4">
-          {['Bio', 'Skills', 'Projects'].map((section) => (
+          {['Bio', 'Skills', 'Projects', 'Contact'].map((section) => (
             <a
               key={section}
               href={`#${section.toLowerCase()}`}

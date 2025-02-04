@@ -1,6 +1,6 @@
 import bgVideo from '../assets/video-loop.mp4';
 
-const VideoBackground = () => {
+const VideoBackground: React.FC = () => {
   return (
     <video
       className="fixed top-0 left-0 w-full h-full object-cover opacity-80 -z-10"
@@ -8,7 +8,7 @@ const VideoBackground = () => {
       autoPlay
       muted
     >
-      <source src={bgVideo} type="video/mp4" />
+      <source src={bgVideo as string} type="video/mp4" />
     </video>
   );
 };

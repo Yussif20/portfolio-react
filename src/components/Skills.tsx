@@ -1,4 +1,3 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
@@ -26,7 +25,7 @@ const skills = [
   { name: 'Python', icon: faPython, color: 'text-blue-600' },
 ];
 
-const Skills = () => {
+const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-16 bg-gray-100 dark:bg-black">
       <h2 className="text-center text-4xl font-bold mb-8">My Skills</h2>

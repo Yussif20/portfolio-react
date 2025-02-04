@@ -1,10 +1,9 @@
-import React from 'react';
 import yussifImage from '../assets/yussif.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
-const Bio = () => {
+const Bio: React.FC = () => {
   return (
     <section
       id="bio"
@@ -53,7 +52,7 @@ const Bio = () => {
         </div>
         <div className=" flex items-center justify-center bg-black dark:bg-greenColor rounded-bioPic order-1 md:order-2 mb-6 md:mb-0">
           <img
-            src={yussifImage}
+            src={yussifImage as string}
             alt="Yusif Ayman"
             className="w-[24rem] object-cover rounded-bioPic"
           />
