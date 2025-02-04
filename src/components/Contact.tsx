@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
         ></textarea>
         <button
           type="submit"
-          className="mt-6 w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300"
+          className="mt-6 w-full bg-greenColor text-white py-3 rounded-lg hover:bg-[#33b8a5]  transition-colors duration-300"
         >
           Send Message
         </button>
