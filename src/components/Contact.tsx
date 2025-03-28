@@ -1,3 +1,4 @@
+// Contact.tsx
 import React, { useState } from 'react';
 
 const Contact: React.FC = () => {
@@ -6,6 +7,7 @@ const Contact: React.FC = () => {
     phone: '',
     message: '',
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -20,7 +22,6 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // Replace with your Formspree or EmailJS endpoint
     const endpoint = 'https://formspree.io/f/xeoekwjv';
 
     try {
@@ -33,8 +34,9 @@ const Contact: React.FC = () => {
       });
 
       if (response.ok) {
-        alert('Message sent successfully!');
-        setFormData({ name: '', phone: '', message: '' }); // Reset form
+        setSubmitted(true);
+        setFormData({ name: '', phone: '', message: '' });
+        setTimeout(() => setSubmitted(false), 3000); // Hide after 3 seconds
       } else {
         alert('Failed to send message. Please try again.');
       }
@@ -45,7 +47,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 ">
+    <section id="contact" className="py-16">
       <div className="text-center mb-8">
         <p className="text-lg text-gray-700 dark:text-gray-300">
           Feel free to reach out! I prefer email due to potential time zone
@@ -93,10 +95,16 @@ const Contact: React.FC = () => {
         ></textarea>
         <button
           type="submit"
-          className="mt-6 w-full bg-greenColor text-white py-3 rounded-lg hover:bg-[#33b8a5]  transition-colors duration-300"
+          className="mt-6 w-full bg-[#03a696] text-white py-3 rounded-lg hover:bg-[#028c7e] transition-colors duration-300"
         >
           Send Message
         </button>
+
+        {submitted && (
+          <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-[#03a696] text-white px-6 py-3 rounded-md shadow-lg animate-fade-in">
+            Message sent successfully!
+          </div>
+        )}
       </form>
     </section>
   );

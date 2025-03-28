@@ -29,3 +29,6 @@ html.dark ::-webkit-scrollbar-track {
 ::-webkit-scrollbar-thumb:hover {
   background: #028675;
 }
+textarea {
+  resize: none;
+}

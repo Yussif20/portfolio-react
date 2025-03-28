@@ -4,6 +4,15 @@ import kanbanImg from './assets/projects/kanban.jpeg';
 import todoImg from './assets/projects/todo.jpeg';
 import ageCalculatorImg from './assets/projects/ageCalculator.jpeg';
 
+export interface Project {
+  id: number;
+  title: string;
+  img: string;
+  description: string;
+  liveLink: string;
+  githubLink: string;
+}
+
 export const projects = [
   {
     id: 1,
