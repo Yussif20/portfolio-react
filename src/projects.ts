@@ -1,5 +1,6 @@
 import marketioImg from './assets/projects/marketio.jpeg';
 import aroundTheWorldImg from './assets/projects/aroundTheWorld.jpeg';
+import marsImg from './assets/projects/mars.jpeg';
 import kanbanImg from './assets/projects/kanban.jpeg';
 import todoImg from './assets/projects/todo.jpeg';
 import ageCalculatorImg from './assets/projects/ageCalculator.jpeg';
@@ -25,6 +26,15 @@ export const projects = [
   },
   {
     id: 2,
+    title: 'Mars',
+    img: marsImg,
+    description:
+      'Mars is a modern React app offering seamless eSIM-based mobile connectivity. It enables users to explore, select, and instantly activate digital SIMs for local, regional, or global data plans. With global coverage and flexible options, Mars eliminates physical SIMs, ideal for travelers and remote workers.',
+    liveLink: 'https://mars-lemon.vercel.app/',
+    githubLink: 'https://github.com/Yussif20/Mars',
+  },
+  {
+    id: 3,
     title: 'Around the World',
     img: aroundTheWorldImg,
     description:
@@ -33,7 +43,7 @@ export const projects = [
     githubLink: 'https://github.com/Yussif20/around-the-world_reactjs',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Kanban Board',
     img: kanbanImg,
     description:
@@ -42,7 +52,7 @@ export const projects = [
     githubLink: 'https://github.com/Yussif20/kanban-board',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Todo App',
     img: todoImg,
     description:
@@ -51,7 +61,7 @@ export const projects = [
     githubLink: 'https://github.com/Yussif20/TODO-App',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Age by Day Calculator',
     img: ageCalculatorImg,
     description:

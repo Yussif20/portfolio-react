@@ -21,7 +21,9 @@ const Projects: React.FC = () => {
       ['Todo App', 'Age by Day Calculator'].includes(project.title)
     ),
     react: projects.filter((project) =>
-      ['Marketio', 'Around the World', 'Kanban Board'].includes(project.title)
+      ['Marketio', 'Mars', 'Around the World', 'Kanban Board'].includes(
+        project.title
+      )
     ),
     nextjs: [],
   };
