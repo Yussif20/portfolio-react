@@ -1,35 +1,44 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const activeCircleStyles =
-  'flex items-center justify-center w-5 h-5 rounded-full';
+  'flex items-center justify-center w-5 h-5 rounded-full transition-colors duration-300 ring-2 ring-transparent';
 
 const ThemeSwitcher: React.FC = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    }
+    const systemDark = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches;
+    const initialTheme =
+      (savedTheme as 'light' | 'dark' | null) ||
+      (systemDark ? 'dark' : 'light');
+
+    setTheme(initialTheme);
+    document.documentElement.classList.toggle('dark', initialTheme === 'dark');
   }, []);
 
-  const themeToggleHandler = (newTheme: string) => {
+  const themeToggleHandler = (newTheme: 'light' | 'dark'): void => {
     document.documentElement.classList.toggle('dark', newTheme === 'dark');
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   };
+
   return (
-    <div className="flex items-center justify-around h-8 w-14 bg-[#1F2937] dark:bg-[#111827] rounded-2xl ">
+    <div className="flex items-center justify-around h-8 w-14 bg-gray-100 dark:bg-gray-700 rounded-2xl shadow-sm transition-colors duration-300">
       <button
         className={`${activeCircleStyles} ${
-          theme === 'light' ? 'bg-white' : ''
+          theme === 'light'
+            ? 'bg-white ring-[#ee2e3a]/50'
+            : 'bg-gray-700 ring-gray-600'
         }`}
         onClick={() => themeToggleHandler('light')}
+        aria-label="Switch to light mode"
       >
         <svg
           width="14"
-          className="fill-gray-800 dark:fill-gray-100"
+          className="fill-yellow-500 cursor-pointer"
           height="13"
           viewBox="0 0 14 13"
           fill="none"
@@ -41,19 +50,22 @@ const ThemeSwitcher: React.FC = () => {
           <path d="M11.593 1.90356L10.7613 2.73527C10.6795 2.81707 10.6795 2.95027 10.7613 3.03208C10.8022 3.07298 10.8557 3.09396 10.9092 3.09396C10.9627 3.09396 11.0162 3.07298 11.0571 3.03208L11.8888 2.20038C11.9706 2.11857 11.9706 1.98537 11.8888 1.90356C11.807 1.82176 11.6748 1.82176 11.593 1.90356Z" />
           <path d="M3.52978 9.96681L2.69807 10.7985C2.61627 10.8803 2.61627 11.0135 2.69807 11.0953C2.73898 11.1362 2.79247 11.1572 2.84596 11.1572C2.89944 11.1572 2.95293 11.1362 2.99384 11.0953L3.82554 10.2636C3.90735 10.1818 3.90735 10.0486 3.82554 9.96681C3.74373 9.885 3.61158 9.885 3.52978 9.96681Z" />
           <path d="M13.5837 6.28965H12.4069C12.2915 6.28965 12.1971 6.38404 12.1971 6.49941C12.1971 6.61478 12.2915 6.70917 12.4069 6.70917H13.5837C13.699 6.70917 13.7934 6.61478 13.7934 6.49941C13.7934 6.38404 13.7001 6.28965 13.5837 6.28965Z" />
-          <path d="M2.18108 6.28965H1.00432C0.888948 6.28965 0.794556 6.38404 0.794556 6.49941C0.794556 6.61478 0.888948 6.70917 1.00432 6.70917H2.18108C2.29645 6.70917 2.39084 6.61478 2.39084 6.49941C2.39084 6.38404 2.29645 6.28965 2.18108 6.28965Z" />
+          <path d="M2.18108 6.28965H1.00432C0.888948 6.28965 0.794556 6.38404 0.794556 6.49941C0.794556 6.61478 0.888948 6.70917 1.00432 6.70917H2.18108C2.29645 6.70917 2.39084 6.49941C2.39084 6.38404 2.29645 6.28965 2.18108 6.28965Z" />
           <path d="M11.0581 9.96681C10.9763 9.885 10.8431 9.885 10.7613 9.96681C10.6795 10.0486 10.6795 10.1818 10.7613 10.2636L11.593 11.0953C11.6339 11.1362 11.6874 11.1572 11.7409 11.1572C11.7944 11.1572 11.8479 11.1362 11.8888 11.0953C11.9706 11.0135 11.9706 10.8803 11.8888 10.7985L11.0581 9.96681Z" />
           <path d="M2.99489 1.90356C2.91308 1.82176 2.77988 1.82176 2.69807 1.90356C2.61627 1.98537 2.61627 2.11857 2.69807 2.20038L3.52978 3.03208C3.57068 3.07298 3.62417 3.09396 3.67766 3.09396C3.73115 3.09396 3.78464 3.07298 3.82554 3.03208C3.90735 2.95027 3.90735 2.81707 3.82554 2.73527L2.99489 1.90356Z" />
         </svg>
       </button>
       <button
         className={`${activeCircleStyles} ${
-          theme === 'dark' ? 'bg-[#f9fafb]' : ''
+          theme === 'dark'
+            ? 'bg-gray-200 ring-[#ee2e3a]/50'
+            : 'bg-gray-200 ring-gray-400'
         }`}
         onClick={() => themeToggleHandler('dark')}
+        aria-label="Switch to dark mode"
       >
         <svg
-          className="fill-white dark:fill-gray-900"
+          className="fill-gray-900 cursor-pointer"
           width="12"
           height="12"
           viewBox="0 0 12 12"
