@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-16 bg-gray-100 dark:bg-black">
       <h2 className="text-center text-4xl font-bold mb-8 text-gray-800 dark:text-white">
-        My Skills
+        Technologies
       </h2>
       <div className="flex flex-wrap justify-center gap-8">
         {skills.map((skill) => (
