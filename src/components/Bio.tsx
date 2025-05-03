@@ -15,7 +15,7 @@ const Bio: React.FC = () => {
             Hi There, I&apos;m a Passionate Frontend Developer
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl m-6">
-            My name is <span className="font-semibold">Yusif Ayman</span>. I
+            My name is <span className="font-semibold">Yousef Ayman</span>. I
             create modern, user-friendly interfaces.
             <br />
             Find me on

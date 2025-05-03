@@ -6,7 +6,7 @@ import {
   faJs,
   faReact,
   faGithub,
-  faPython,
+  // faPython,
   faSass,
 } from '@fortawesome/free-brands-svg-icons';
 import typescriptLogo from '../assets/typescript.svg';
@@ -27,7 +27,7 @@ const skills = [
     icon: faGithub,
     color: 'text-gray-800 dark:text-githubColorDark',
   },
-  { name: 'Python', icon: faPython, color: 'text-blue-600' }, // Added color back
+  // { name: 'Python', icon: faPython, color: 'text-blue-600' }, // Added color back
 ];
 
 const Skills: React.FC = () => {

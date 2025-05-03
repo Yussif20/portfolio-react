@@ -4,6 +4,7 @@ import marsImg from './assets/projects/mars.jpeg';
 import kanbanImg from './assets/projects/kanban.jpeg';
 import todoImg from './assets/projects/todo.jpeg';
 import ageCalculatorImg from './assets/projects/ageCalculator.jpeg';
+import goldenMetalImg from './assets/projects/goldenMetal.jpg';
 
 export interface Project {
   id: number;
@@ -34,6 +35,15 @@ export const projects = [
     githubLink: 'https://github.com/Yussif20/Mars',
   },
   {
+    id: 5,
+    title: 'Golden Metal',
+    img: goldenMetalImg,
+    description:
+      'Golden Metal is a multilingual, responsive React website for a Mining company. It features RTL/LTR language support, light/dark themes, and navigation across six dynamic pages built with Vite, Tailwind CSS, and React Router.',
+    liveLink: 'https://goldenmetal-co.com/',
+    githubLink: 'https://github.com/Yussif20/golden-metal',
+  },
+  {
     id: 3,
     title: 'Around the World',
     img: aroundTheWorldImg,
@@ -52,7 +62,7 @@ export const projects = [
     githubLink: 'https://github.com/Yussif20/kanban-board',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Todo App',
     img: todoImg,
     description:
@@ -61,7 +71,7 @@ export const projects = [
     githubLink: 'https://github.com/Yussif20/TODO-App',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Age by Day Calculator',
     img: ageCalculatorImg,
     description:
