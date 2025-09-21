@@ -1,7 +1,7 @@
-import yussifImage from '../assets/yussif.png';
+import yussifImage from "../assets/yusif.jpg";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Bio: React.FC = () => {
   return (
@@ -45,7 +45,7 @@ const Bio: React.FC = () => {
               Say Hi
             </a>
             <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-              Download CV{' '}
+              Download CV{" "}
               <i className="ml-1 fa-solid fa-arrow-down fa-bounce"></i>
             </a>
           </div>
