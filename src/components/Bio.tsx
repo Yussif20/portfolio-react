@@ -44,7 +44,11 @@ const Bio: React.FC = () => {
             >
               Say Hi
             </a>
-            <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/yousef-ayman.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download CV{" "}
               <i className="ml-1 fa-solid fa-arrow-down fa-bounce"></i>
             </a>
